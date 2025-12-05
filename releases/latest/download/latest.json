@@ -1,0 +1,15 @@
+{
+  "version": "0.1.0",
+  "notes": "Primer release de Lockio",
+  "pub_date": "2025-12-05T08:00:00Z",
+  "platforms": {
+    "windows-x86_64-nsis": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTOW5EcEFTdUNFbTNaNzIwZTA5amt1R3JkaVJaZUREc3pJcWMzNEpmMUxVbGIreXpGaExEdmVWamVrQnBUd0ltb1ZKbTRvY0YwMFFUWE1TRHpXdDhxUW9kSGJEelQyTGdJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY0OTQ3NjEzCWZpbGU6TG9ja2lvXzAuMS4wX3g2NC1zZXR1cC5leGUKcXBva3pqMUh1Qjk1R0NseTY2a1RRUWx3TURWUGxvVThpUjArWUgxSk1QaUo5KzYyR2RqVnlSZXdRR1Z5WW54ZzNZeG1xenBpd1l3c0psd3ZCOXNlRFE9PQo=",
+      "url": "https://dcervantesvz.github.io/lockio-releases/Lockio_0.1.0_x64-setup.exe"
+    },
+    "windows-x86_64-msi": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTOW5EcEFTdUNFbTVhMmMwdkprYTF3T2VWelgxTHI2M2toV3VGUWF4Y1BhTzZWZzB5aFFMOTFQZ2N4Q01BeE1rRThWOGI0U2luV2lkNjVWalp1cXF1cmJlTmQyQWxkTFFjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY0OTQ3NjEzCWZpbGU6TG9ja2lvXzAuMS4wX3g2NF9lbi1VUy5tc2kKU0hpS2I0UDFraEZOamxwVVhYa0JvdGJkelI0RzJpLzVBM3ZWMlFlT3VDTmZTVGJHZTRHR2Uyc3k2RG9ORXgxN1RMa0hiR1poNjdBbTVQSXBqaUZsQ0E9PQo=",
+      "url": "https://dcervantesvz.github.io/lockio-releases/Lockio_0.1.0_x64_en-US.msi"
+    }
+  }
+}
