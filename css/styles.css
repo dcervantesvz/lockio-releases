@@ -1,0 +1,339 @@
+/* Theme tokens (Se mantienen) */
+:root {
+    --bg: #ffffff;
+    --text: #1b1f23;
+    --muted: #5f6b7a;
+    --card: #f6f8fa;
+    --border: #e5e7eb;
+    --primary: #2563eb;
+    --primary-contrast: #ffffff;
+    --shadow-subtle: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #0f1216;
+        --text: #e6e8ea;
+        --muted: #a3a9b3;
+        --card: #151920;
+        --border: #232833;
+        --primary: #3b82f6;
+        --primary-contrast: #0f1216;
+        --shadow-subtle: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Base (Se mantiene) */
+html, body {
+    height: 100%;
+}
+
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Containers (Se mantiene) */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+/* Header, Buttons, Sections (Se mantienen) */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    backdrop-filter: saturate(180%) blur(8px);
+    background: color-mix(in oklab, var(--bg) 80%, transparent);
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow-subtle);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 64px;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+}
+
+.brand-name {
+    font-weight: 600;
+}
+
+.header-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    height: 40px;
+    padding: 0 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.btn:hover {
+    transform: none;
+    box-shadow: none;
+    opacity: 0.9;
+}
+
+.btn-primary {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--primary-contrast);
+}
+
+.btn-primary:hover {
+    background: color-mix(in oklab, var(--primary) 90%, var(--bg));
+    border-color: color-mix(in oklab, var(--primary) 90%, var(--bg));
+    opacity: 1;
+}
+
+.btn-ghost {
+    background: transparent;
+    border-color: transparent;
+}
+
+.btn-ghost:hover {
+    background: var(--card);
+    border-color: var(--border);
+}
+
+.section {
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+.title {
+    margin: 0 0 0.5rem 0;
+    font-size: 2rem;
+}
+
+.subtitle {
+    color: var(--muted);
+    max-width: 48ch;
+}
+
+.section-title {
+    margin: 0 0 1.5rem 0;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+/* --- Layouts - Desktop Optimizado para Imágenes --- */
+
+/* Hero (Texto ocupa menos espacio, imagen más grande) */
+.hero .hero-grid {
+    display: grid;
+    /* Cambiado de 1.15fr 0.85fr a 1fr 1fr para centrar la atención */
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* Showcase (Balanceado 50/50, lo que hace que las imágenes crezcan) */
+.showcase-grid {
+    display: grid;
+    /* Cambiado de 0.9fr 1.1fr a 1fr 1fr */
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.showcase-grid.reverse {
+    /* Mantenemos el orden invertido, pero con columnas 1fr 1fr */
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Estilo de Imágenes/Capturas de pantalla */
+.hero-media .screenshot,
+.showcase-media .screenshot {
+    width: 100%;
+    /* La altura de la imagen se ajustará automáticamente */
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    box-shadow: var(--shadow-subtle);
+}
+
+.hero-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+/* Features grid (Se mantiene) */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--card);
+}
+
+.card-title {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.card-text {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.list {
+    padding-left: 1.25rem;
+}
+
+.list li {
+    margin: 0.5rem 0;
+}
+
+/* CTA y Footer (Se mantienen) */
+.cta-inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cta-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.site-footer {
+    padding: 2rem 0;
+}
+
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--border);
+    padding-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+.footer-inner p {
+    margin: 0;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-nav a {
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+/* --- Responsive (Mobile) Optimizado --- */
+@media (max-width: 900px) {
+
+    /* Resetear layouts a una sola columna */
+    .section {
+        padding: 3rem 0;
+    }
+
+    .hero .hero-grid,
+    .showcase-grid,
+    .showcase-grid.reverse,
+    .cta-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* Orden para móvil: Imagen arriba, Texto abajo */
+    .hero-media,
+    .showcase-media {
+        order: -1;
+    }
+
+    .showcase-grid.reverse .showcase-media {
+        order: -1;
+        /* Aplicar también a la versión inversa para consistencia */
+    }
+
+    /* Footer */
+    .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    /* Features */
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    /* Header y CTA para móvil */
+    .header-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .cta-inner {
+        gap: 1.5rem;
+    }
+
+    .cta-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

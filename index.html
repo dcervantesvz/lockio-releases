@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="auto">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lockio - Secure Password Vault</title>
+    <meta
+      name="description"
+      content="Lockio Desktop: bóveda de contraseñas local y cifrada para Windows. Gestión segura con SQLCipher, generador de claves y modo oscuro/claro."
+    />
+
+    <link rel="icon" type="image/png" href="images/Lockio-logo.png" />
+
+    <meta property="og:title" content="Lockio - Bóveda de Contraseñas Segura" />
+    <meta
+      property="og:description"
+      content="Gestión de contraseñas local, cifrada con SQLCipher para Windows."
+    />
+    <meta property="og:image" content="images/screenshot-main.png" />
+    <meta
+      property="og:url"
+      content="https://dcervantesvz.github.io/lockio-releases/"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#">
+          <img
+            src="images/Lockio-logo.png"
+            alt="Logotipo de Lockio"
+            class="logo"
+          />
+          <span class="brand-name">Lockio</span>
+        </a>
+        <div class="header-actions">
+          <button
+            id="themeToggle"
+            class="btn btn-ghost"
+            aria-label="Alternar modo claro/oscuro"
+          >
+            Modo oscuro
+          </button>
+          <a
+            class="btn btn-primary"
+            href="https://github.com/dcervantesvz/lockio-releases/releases"
+            >Descargar</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section hero">
+        <div class="container hero-grid">
+          <div class="hero-text">
+            <h1 class="title">Bóveda de contraseñas segura y local</h1>
+            <p class="subtitle">
+              Bienvenido al repositorio de distribución oficial de
+              <strong>Lockio</strong>. La aplicación de escritorio para
+              gestionar tu bóveda de contraseñas de forma **segura** y **local**
+              en Windows.
+            </p>
+            <div class="hero-actions">
+              <a
+                class="btn btn-primary"
+                href="https://github.com/dcervantesvz/lockio-releases/releases"
+                >Descargar para Windows</a
+              >
+            </div>
+          </div>
+          <figure class="hero-media">
+            <img
+              src="images/screenshot-main.png"
+              alt="Captura de pantalla de la interfaz principal de Lockio, mostrando la lista de contraseñas."
+              class="screenshot"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section class="section features">
+        <div class="container">
+          <h2 class="section-title">Lockio para Windows</h2>
+          <div class="grid-3">
+            <article class="card">
+              <h3 class="card-title">Bóveda cifrada</h3>
+              <p class="card-text">
+                Archivo único <code>.lockio</code> protegido con tu clave
+                maestra y cifrado con **SQLCipher**.
+              </p>
+            </article>
+            <article class="card">
+              <h3 class="card-title">Interfaz intuitiva</h3>
+              <p class="card-text">
+                Construida con **Tauri** y **Vue 3**, enfocada en rapidez,
+                claridad y productividad.
+              </p>
+            </article>
+            <article class="card">
+              <h3 class="card-title">Gestión completa</h3>
+              <p class="card-text">
+                Crear, editar, eliminar y restaurar contraseñas con papelera de
+                reciclaje.
+              </p>
+            </article>
+            <article class="card">
+              <h3 class="card-title">Generador de contraseñas</h3>
+              <p class="card-text">
+                Claves seguras y personalizadas: longitud, mayúsculas,
+                minúsculas, números y símbolos.
+              </p>
+            </article>
+            <article class="card">
+              <h3 class="card-title">Actualizaciones automáticas</h3>
+              <p class="card-text">
+                Verificación y descarga de binarios firmados digitalmente.
+              </p>
+            </article>
+            <article class="card">
+              <h3 class="card-title">Modo claro/oscuro</h3>
+              <p class="card-text">
+                Se adapta a tu preferencia visual y al tema del sistema para
+                reducir la fatiga.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section showcase">
+        <div class="container showcase-grid">
+          <div class="showcase-text">
+            <h2 class="section-title">Seguridad</h2>
+            <ul class="list">
+              <li>
+                <strong>Clave maestra:</strong> sin ella, el archivo
+                <code>.lockio</code> es ilegible.
+              </li>
+              <li>
+                <strong>Integridad transaccional:</strong> todas las operaciones
+                seguras con SQLite.
+              </li>
+              <li>
+                <strong>Binarios firmados:</strong> cada release validado por el
+                updater.
+              </li>
+            </ul>
+          </div>
+          <figure class="showcase-media">
+            <img
+              src="images/screenshot-security.png"
+              alt="Vista de seguridad y cifrado de Lockio"
+              class="screenshot"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section class="section showcase">
+        <div class="container showcase-grid reverse">
+          <figure class="showcase-media">
+            <img
+              src="images/password-generator.png"
+              alt="Generador de contraseñas personalizable en Lockio"
+              class="screenshot"
+            />
+          </figure>
+          <div class="showcase-text">
+            <h2 class="section-title">Generador de contraseñas</h2>
+            <p>
+              Configura longitud y complejidad; copia rápido y úsalo en tus
+              entradas.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section showcase">
+        <div class="container showcase-grid">
+          <div class="showcase-text">
+            <h2 class="section-title">Modo claro/oscuro</h2>
+            <p>Reduce la fatiga visual y adapta la interfaz a tu entorno.</p>
+          </div>
+          <figure class="showcase-media">
+            <img
+              src="images/theme-switch.png"
+              alt="Interruptor de tema claro/oscuro"
+              class="screenshot"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section class="section cta">
+        <div class="container cta-inner">
+          <div>
+            <h2 class="section-title">Descargas</h2>
+            <p>Las versiones estables están disponibles en GitHub Releases.</p>
+          </div>
+          <div class="cta-actions">
+            <a
+              class="btn btn-primary"
+              href="https://github.com/dcervantesvz/lockio-releases/releases"
+              >Ir a Releases</a
+            >
+            <a
+              class="btn btn-ghost"
+              href="https://github.com/dcervantesvz/lockio-releases/issues"
+              >Reportar un issue</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>
+          © <span id="currentYear">2025</span> Softmaster. Todos los derechos
+          reservados.
+        </p>
+        <nav class="footer-nav">
+          <a href="https://github.com/dcervantesvz/lockio-releases"
+            >Código Fuente</a
+          >
+        </nav>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
